@@ -1,0 +1,27 @@
+<!DOCTYPE html> 
+    <html> 
+       <head></head> 
+       <body style='height: 100%;   width: 100%; margin: 0 0 0 0;   '> 
+          <div id='_display'></div> 
+          <div id='_txt'> 
+             Resize window for effect.<br> 
+             Morbi facilisis placerat ipsum, pulvinar blandit enim aliquet ac. Donec in nulla fermentum, consequat eros in, elementum magna. Phasellus pharetra, elit vel cursus vestibulum, elit dolor molestie diam, eu convallis nulla erat ut nibh. Donec sollicitudin tellus ut purus convallis, vitae efficitur dolor tincidunt. Mauris interdum vitae dui et blandit. Ut egestas vestibulum metus, vitae consectetur quam elementum vel. Sed ultricies pretium orci eu cursus. Phasellus rhoncus ex eget magna consectetur cursus. Quisque non hendrerit felis. Curabitur ac ligula in arcu semper varius. Etiam quis metus tortor. Maecenas nisi tellus, vulputate ac purus et, pellentesque posuere nisl. Curabitur tincidunt leo lorem, quis ultrices mi facilisis sed. In tortor elit, ullamcorper dictum nibh sed, ornare condimentum leo. Nam posuere dui vitae lectus tincidunt, nec scelerisque orci tempus. 
+             <br>             
+          </div>          
+       </body>       
+       <script>       
+       function _resize_font(){ 
+          var _body=document.body          
+          _body.w=parseInt(window.getComputedStyle(_body ,null).width)             
+          var _font_size_w=10+0.01*_body.w 
+          document.body.style.fontSize=_font_size_w+'px'             
+       }       
+       _resize_font() 
+       var _display=document.getElementById('_display')       
+       _display.innerHTML='Your font size is: '+document.body.style.fontSize 
+       window.onresize=function(){ 
+          _resize_font()          
+          _display.innerHTML='Your font size is: '+document.body.style.fontSize 
+       }             
+    </script> 
+    </html>
